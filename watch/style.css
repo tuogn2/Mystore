@@ -1,0 +1,13 @@
+h2 {
+    
+    background-color: aquamarine;
+    border-radius: 100px;
+    height: 300px;
+    width: 300px;  
+}
+body{
+     
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}

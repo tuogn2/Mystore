@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body onload="showTime()">
+    <h2>thời gian hiện tại: <span id="time"></span></h2>
+    <script>
+        function showTime(){
+            const  t = new Date();
+            let hour = t.getHours();
+            let minute = t.getMinutes();
+            let  second = t.getSeconds();
+            hour= formatForNumBer(hour);
+            minute= formatForNumBer(minute);
+            second= formatForNumBer(second);
+            document.getElementById("time").innerHTML= hour + ":" + minute + ":" + second;
+            setTimeout(showTime,1000);
+        }
+        function formatForNumBer(x){
+            if(x < 10)
+                x="0"+x;
+            return x;
+        }
+    </script>
+</body>
+</html>
